@@ -1,11 +1,9 @@
 function prime(countNumber) {
-    console.time()
-    
     const arrayNumber = [2];
     let start = 1;
 
     if (+countNumber === 1) {
-        return arrayNumber
+        return arrayNumber;
     }
     
     while (+countNumber !== arrayNumber.length) {
@@ -15,6 +13,10 @@ function prime(countNumber) {
             if (start % step === 0) {
                 count++;
             }
+            
+            if (count > 2) {
+                break;
+            }
 
             if (count === 2 && step === start) {
                 arrayNumber.push(start);
@@ -22,9 +24,7 @@ function prime(countNumber) {
         }
     }
 
-    console.timeEnd()
-    return arrayNumber[arrayNumber.length - 1]
+    return arrayNumber
 }
-
 
 console.log(prime(process.argv[2]));
