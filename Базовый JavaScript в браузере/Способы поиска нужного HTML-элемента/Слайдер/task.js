@@ -4,7 +4,7 @@
     }
        
     function removeClassNameAndReturnIndex(arraySelector, removeSelector) {
-        for (let i = 0; i <= arraySelector.length; i++) {
+        for (let i = 0; i < arraySelector.length; i++) {
             if (arraySelector[i].classList.contains( removeSelector )) {
                 arraySelector[i].classList.toggle( removeSelector );
                 return i;
