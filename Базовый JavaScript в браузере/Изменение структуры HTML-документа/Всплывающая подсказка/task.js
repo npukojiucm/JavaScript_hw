@@ -7,7 +7,7 @@ a.forEach(elm => elm.onclick = () => {
     elm.insertAdjacentElement("afterend", div);
     let top = elm.getBoundingClientRect().top
 
-    div.classList.add("tooltip_active");
+    div.classList.toggle("tooltip_active");
     div.style.left = elm.offsetLeft + "px";
     div.style.top = top + 20 + "px";
     div.textContent = elm.title;
